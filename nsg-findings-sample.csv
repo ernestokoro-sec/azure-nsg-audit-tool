@@ -1,0 +1,4 @@
+nsg_name,rule_name,priority,risk_level,issue,source,destination_port,protocol,recommendation
+web-nsg,Allow-HTTP,1000,Review,Inbound allow from public source,*,80,Tcp,"Validate business justification and restrict source where possible."
+web-nsg,Allow-HTTPS,1010,Review,Inbound allow from public source,*,443,Tcp,"Validate business justification and restrict source where possible."
+mgmt-nsg,Allow-RDP-Bad,1100,High,Public RDP exposure,*,3389,Tcp,"Restrict source to a trusted IP range, VPN, Bastion, or remove public management access."
