@@ -1,0 +1,28 @@
+Azure NSG Security Audit
+==================================================
+
+NSG:            web-nsg
+Rule:           Allow-HTTPS
+Priority:       1010
+Risk:           Review
+Issue:          Inbound allow from public source
+Source:         *
+Port:           443
+Protocol:       Tcp
+Recommendation: Validate business justification and restrict source where possible.
+
+--------------------------------------------------
+
+NSG:            web-nsg
+Rule:           Allow-HTTP
+Priority:       1000
+Risk:           Review
+Issue:          Inbound allow from public source
+Source:         *
+Port:           80
+Protocol:       Tcp
+Recommendation: Validate business justification and restrict source where possible.
+
+--------------------------------------------------
+
+Report written to nsg_findings.csv
